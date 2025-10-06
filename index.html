@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sticky Notes - Playground</title>
+  <link rel="stylesheet" href="/style.css" />
+  <meta name="description" content="Sticky Notes app (localStorage) — create, edit, delete, reorder notes.">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Sticky Notes</h1>
+    <div class="controls" role="toolbar" aria-label="Note controls">
+      <input id="search" type="search" placeholder="Search notes..." aria-label="Search notes"/>
+      <button id="addNoteBtn" aria-label="Create new note" title="New note">+ New</button>
+      <button id="exportBtn" aria-label="Export notes" title="Export">Export</button>
+      <button id="importBtn" aria-label="Import notes" title="Import">Import</button>
+      <button id="syncBtn" aria-label="Sync notes" title="Sync">Sync</button>
+      <button id="clearBtn" aria-label="Clear all notes" title="Clear all">Clear</button>
+      <input id="importFile" type="file" accept="application/json" style="display:none" aria-hidden="true" />
+    </div>
+  </header>
+
+  <main>
+    <section id="notesContainer" class="notes-grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="app-footer" aria-hidden="false">
+    <small>Notes saved locally in this browser (localStorage). Firebase sync example included as a stub.</small>
+  </footer>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
